@@ -1,0 +1,75 @@
+
+.container{
+   
+
+    background-color: blueviolet;
+    display: grid;
+    min-height: 300px;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    
+  
+   
+}
+
+.componentA{
+    background-color: green;
+    /* margin: 20px 20px 20px 20px; */
+    grid-column: 2/4;
+    text-align: center;
+    margin-top: 10px;
+    
+    
+    
+}
+
+.componentB{
+    background-color: orange;
+    text-align: center;
+    /* margin: 20px 20px 20px 20px; */
+    grid-column: 2/3;
+    margin-bottom: 20px;
+}
+
+
+.componentC{
+    background-color: orange;
+    text-align: center;
+    /* margin: 20px 20px 20px 20px; */
+    grid-column: 3/4;
+    margin-bottom: 20px;
+}
+
+
+@media (min-width: 375px) and (max-width: 740px){
+
+
+
+    .componentB{
+        grid-area: 1/1/2/3;
+    }
+    .componentC{
+        grid-area:1/3/2/5;
+    }
+
+
+}
+
+@media(max-width:375px){
+   .componentB{
+       grid-area: 1/1/2/5;
+       margin: 10px ;
+    }
+    
+    .componentA{
+        grid-area: 2/1/3/5;
+        margin: 10px ;
+   }
+
+   .componentC{
+       grid-area: 3/2/4/4;
+   }
+}
